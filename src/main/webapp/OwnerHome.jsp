@@ -122,7 +122,7 @@
                                     <div class="class-box-icon">
                                         <img src="assets/images/class-icon4.png" alt="Icon">
                                     </div>
-                                    <a href="OwnerViewBooking.jsp"><h3 class="h3-title">Manage<br>Bookings</h3></a>
+                                    <a href="OwnerViewBookings.jsp"><h3 class="h3-title">Manage<br>Bookings</h3></a>
                                 </div>
                                 <p>Owner can see it's customer information of who booked his gym plan</p>
                             </div>

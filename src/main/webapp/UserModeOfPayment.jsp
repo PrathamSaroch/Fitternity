@@ -92,43 +92,9 @@
                 }
             }
 
-            function cashPayment()
-            {
-                var url = "./userCashPayment";
-
-                var formdata = new FormData();
-                formdata.append("startdate", startdate);
-                formdata.append("enddate", enddate);
-                formdata.append("packageid", packageid);
-                formdata.append("price", price);
-
-                fetch(url, {method: "POST", body: formdata})
-                        .then(response => response.text())
-                        .then(ans => renderCash(ans));
-            }
-
-            function renderCash(ans) {
-                if (ans == "success")
-                {
-                    Swal.fire({
-                        icon: 'sucsess',
-                        title: 'Done...',
-                        text: 'Payment Done!'
-                    }).then(function () {
-                        window.location.href = "/payment_done_icon.jsp";
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Error Occured !'
-                    });
-                }
-            }
 
             function paymentlogic()
             {
-
                 var options = {
                     "key": "rzp_test_96HeaVmgRvbrfT",
                     "amount": price + "00",

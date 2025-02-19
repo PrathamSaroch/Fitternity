@@ -25,7 +25,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+<!--                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-box-two">
                             <h3 class="h3-title">Our Links</h3>
                             <div class="line"></div>
@@ -37,7 +37,7 @@
                                 <li><a href="contact-us.html">Contact Us</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-box-three">
                             <h3 class="h3-title">Contact Us</h3>

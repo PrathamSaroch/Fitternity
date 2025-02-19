@@ -87,7 +87,7 @@
             {
                 var startdate = document.getElementById("choosedate").innerHTML;
                 var enddate = document.getElementById("enddate").innerHTML;
-                if (startdate == "null")
+                if (startdate == "")
                 {
                     Swal.fire({
                         icon: 'error',
@@ -171,7 +171,6 @@
                                 <div style="text-align: center" >
                                     <h3 style="color: white" >Choose your date :</h3><br>
                                     <p><input style="border: 1px solid white; background-color: white" onchange="getEndDate()" id="datepicker"></p>
-
                                 </div>
                             </div>
 

@@ -250,10 +250,8 @@
                                     <a onclick="userCheckLogin('<%=cityname%>')" ><h3 class="h3-title"><%=cityname%></h3></a>
                                 </div>
                                 <p><%=desc%></p>
-
                             </div>
                         </div>
-
                     </div>
                     <%
                 }

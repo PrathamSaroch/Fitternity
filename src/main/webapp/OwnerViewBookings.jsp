@@ -40,7 +40,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
         <script>
-            
+
             function showBookedPackages()
             {
                 var url = "./ownerShowAllBookedPackages";
@@ -50,7 +50,7 @@
                         .then(ans => renderGyms(ans));
             }
             function renderGyms(ans)
-            {   alert(ans);
+            {
                 ans = ans.trim();
                 var mainobj = JSON.parse(ans);
                 var arr = mainobj["ans"];
@@ -62,25 +62,37 @@
                 {
                     var st = arr[i];
 
-                    ren += "<div class= \"col-sm-3\" style=\"text-align: center\" >";
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
+                    ren += "<div class=\"card-body\">";
+                    ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>Address : </b><br>" + st.address + "</label><br><br>";
+                    ren += "</div>";
+                    ren += "</div>";
+
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
                     ren += "<div class=\"card-body\">";
                     ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>User Email : </b><br>" + st.useremail + "</label><br><br>";
                     ren += "</div>";
                     ren += "</div>";
 
-                    ren += "<div class= \"col-sm-3\" style=\"text-align: center\" >";
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
+                    ren += "<div class=\"card-body\">";
+                    ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>Package Name : </b><br>" + st.packagename + "</label><br><br>";
+                    ren += "</div>";
+                    ren += "</div>";
+
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
                     ren += "<div class=\"card-body\">";
                     ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>Package Start : </b><br>" + st.startdate + "</label><br><br>";
                     ren += "</div>";
                     ren += "</div>";
 
-                    ren += "<div class= \"col-sm-3\" style=\"text-align: center\" >";
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
                     ren += "<div class=\"card-body\">";
                     ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>Package end : </b><br>" + st.enddate + "</label><br><br>";
                     ren += "</div>";
                     ren += "</div>";
 
-                    ren += "<div class= \"col-sm-3\" style=\"text-align: center\" >";
+                    ren += "<div class= \"col-sm-2\" style=\"text-align: center\" >";
                     ren += "<div class=\"card-body\">";
                     ren += "<label class=\"card-text text-alli\" style=\"font-size: 16px;text-align: center;color: #005b9a\" ><b>Price </b><br>" + st.price + "</label><br><br>";
 
@@ -96,7 +108,7 @@
 
 
     </head>
-    <body onload="">
+    <body onload="showBookedPackages()">
 
         <!-- Loader Start -->
         <div class="loader-box">
@@ -117,33 +129,38 @@
 
         <!-- Header Start -->
 
-        <%@include file="UserNavbar.jsp" %>
+        <%@include file="OwnerNavbar.jsp" %>
 
         <!-- Header End -->
 
         <!--Banner Start-->
+        <section class="main-banner">
+            <div class="banner-overlay-bg animate-this">
+                <img src="assets/images/banner-overlay.png" alt="Overlay">
+            </div>
+            <div class="banner-blur-bg">
+                <img src="assets/images/blur-1.png" alt="Blur">
+            </div>
 
+        </section>
         <!--Banner End-->
 
-        <section class="main-classes">
-            <div class="row" style="margin-top: 50px">
-                <div class="col-sm-12">
-                    <div class="classes-title">
-                        <h2 style="color: white" class="h2-title">Your Purchased Packages !</h2>
-                    </div>
+        <div class="row" style="margin-top: 50px">
+            <div class="col-sm-12">
+                <div class="classes-title">
+                    <h2 style="color: black" class="h2-title">Your Purchased Packages !</h2>
                 </div>
             </div>
+        </div>
 
-            <!--Portfolio Start-->
-            <div class="main-portfolio" style="margin-top: 100px">
-                <div class="container">
-                    <div id="showgyms"  style="border: 2px solid black; border-radius: 10px; background-color: white" >
+        <div class="main-portfolio" style="margin-top: 100px">
+            <div class="container">
+                <div id="showgyms" style="border: 2px solid black; border-radius: 10px" >
 
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
         <!--Portfolio End-->
 
 

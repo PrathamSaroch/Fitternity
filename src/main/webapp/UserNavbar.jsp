@@ -33,6 +33,13 @@
                                     <i class="menu-background bottom"></i>
                                <ul class="menu">
                                    <li><a href="">Welcome : <%=useremail%></a></li>
+                                   <li class="sub-items">
+                                       <a href="javascript:void(0);" title="Home">Settings</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="UserLogout.jsp">Logout !</a></li>
+                                        <li><a href="UserChangePassword.jsp" title="Home">Change Password</a></li>
+                                    </ul>
+                                    </li>
                                    <li><a href="index_1.jsp">Main Page </a></li>
                                    <li><a href="UserViewPurchasedPackages.jsp">Your Purchased Packages </a></li>
                                    <li><a href="UserLogout.jsp">Logout !</a></li>

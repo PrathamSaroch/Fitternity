@@ -59,7 +59,6 @@
                     });
                 } else {
 
-
                     var formdata = new FormData();
                     formdata.append("gymid", gymid);
                     formdata.append("photo", photo);

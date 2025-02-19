@@ -1,11 +1,9 @@
 package fitternity.controller;
 
-import static com.fasterxml.jackson.databind.util.ClassUtil.name;
 import fitternity.vmm.DBLoader;
 import fitternity.vmm.FileUploader;
 import fitternity.vmm.RDBMS_TO_JSON;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -14,13 +12,13 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
+@CrossOrigin(origins = "*")
 public class AdminController {
 
     @ResponseBody

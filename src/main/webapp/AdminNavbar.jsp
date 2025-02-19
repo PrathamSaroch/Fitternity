@@ -33,9 +33,9 @@ if(adminemail != null )
                                     %>
 
                                     <li>
-                                        <a href="" >Welcome Admin : <%=adminemail%></a>
+                                        <a href="" >Welcome : <%=adminemail%></a>
                                     </li>
-                                    <li><a href="AdminLogout.jsp">Logout !</a></li>
+                                    <li><a href="OwnerLogout.jsp">Logout !</a></li>
 
                                     <%
                                         }

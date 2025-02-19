@@ -4,7 +4,6 @@ import fitternity.vmm.DBLoader;
 import fitternity.vmm.FileUploader;
 import fitternity.vmm.RDBMS_TO_JSON;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -358,6 +357,17 @@ public class OwnerController {
         }
 
         return ans;
+    }
+    
+    @ResponseBody
+    @PostMapping(value = "/ownerShowAllBookedPackages", produces = "application/json")
+    public String userShowAllBookedPackages(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws SQLException {
+        String owneremail = (String) session.getAttribute("owneremail");
+
+        String ans = new RDBMS_TO_JSON().generateJSON("select * from payment_table where owneremail='"+owneremail+ "' ");
+        
+        return ans;
+
     }
 
 }

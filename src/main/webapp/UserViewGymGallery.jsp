@@ -68,14 +68,40 @@
                 {
                     var st = arr[0];
 
-                    var latitude = st.latitude;
-                    var longitute = st.longitute;
-
                     document.getElementById("gymname1").innerHTML = st.gymname;
                     document.getElementById("owneremail").innerHTML = st.owneremail;
                     document.getElementById("address").innerHTML = st.address;
+                    
+                    var latitude = st.latitude;
+                    var longitude = st.longitute;
 
-                    document.getElementById("gmap_canvas").src = "https://maps.google.com/maps?q=" + latitude + "," + longitute + "&ie=UTF8&iwloc=&output=embed";
+
+//fetch('https://api.ipgeolocationapi.com/geolocate')
+//  .then(function(response) {
+//    return response.json();
+//  })
+//  .then(function(data) {
+//    var latitude = data.geo.latitude;
+//    var longitude = data.geo.longitude;
+//    console.log("Latitude: " + latitude);
+//    console.log("Longitude: " + longitude);
+//  })
+//  .catch(function(error) {
+//    console.log("Error:", error);
+//  });
+
+//if (navigator.geolocation) {
+//  navigator.geolocation.getCurrentPosition(showPosition);
+//} else {
+//  console.log("Geolocation is not supported by this browser.");
+//}
+//
+//  var latitude = position.coords.latitude;
+//  var longitude = position.coords.longitude;
+//  console.log("Latitude: " + latitude);
+//  console.log("Longitude: " + longitude);
+
+                    document.getElementById("gmap_canvas").src = "https://maps.google.com/maps?q=" + latitude + "," + longitude + "&ie=UTF8&iwloc=&output=embed";
 
                     if (st.pool == "True")
                     {
@@ -345,7 +371,7 @@
 
                     <div class="main-contact-map-in">
                         <div class="mapouter"><div class="gmap_canvas">
-                                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=31.636694035778973,74.87413616805217&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{
+                                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=31.620845714165693,74.87710472375572&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{
                                         position:relative;
                                         text-align:right;
                                         height:100%;
@@ -367,119 +393,7 @@
         <!--Portfolio Detail End-->
 
         <!--Footer Start-->
-        <footer class="main-footer">
-            <div class="footer-overlay-bg animate-this">
-                <img src="assets/images/footer-overlay.png" alt="Overlay">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-box-one">
-                            <a href="index.html">
-                                <img src="assets/images/logo.png" alt="Fithub">
-                            </a>
-                            <p>Etiam suscipit fringilla ullamcorper sed malesuada urna nec odio.</p>
-                            <div class="footer-time">
-                                <img src="assets/images/clock-2.png" alt="Clock">
-                                <div class="footer-time-text-box">
-                                    <div class="footer-time-text">
-                                        <span>Monday - Friday</span>
-                                        <span>7:00Am - 10:00Pm</span>
-                                    </div>
-                                    <div class="footer-time-text mt-3">
-                                        <span>Saturday - Sunday</span>
-                                        <span>7:00Am - 2:00Pm</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-box-two">
-                            <h3 class="h3-title">Our Links</h3>
-                            <div class="line"></div>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="classes.html">Classes</a></li>
-                                <li><a href="blog-list.html">Blog</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-box-three">
-                            <h3 class="h3-title">Contact Us</h3>
-                            <div class="line"></div>
-                            <ul>
-                                <li>
-                                    <div class="footer-contact-icon">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        <span>1247/Plot No. 39, 15th Phase, Colony, Kukatpally, Hyderabad</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="footer-contact-icon">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        <span>1800-121-3637</span>
-                                        <span>+91 555 234-8765</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="footer-contact-icon">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        <span>info@gmail.com</span>
-                                        <span>services@gmail.com</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-box-four">
-                            <h3 class="h3-title">Our Newsletter</h3>
-                            <div class="line"></div>
-                            <div class="footer-subscribe-form">
-                                <input type="email" name="email" class="form-input subscribe-input" placeholder="Email Address" required="">
-                                <button type="submit" class="sec-btn"><i class="fa fa-chevron-right"></i></button>
-                            </div>
-                            <div class="footer-social">
-                                <ul>
-                                    <li><a href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-7">
-                            <div class="copyright-text">
-                                <span>Copyright © 2022 <a href="index.html">ShivaayThemes.</a> All rights reserved.</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-5">
-                            <div class="copyright-links">
-                                <ul>
-                                    <li><a href="about-us.html">Privacy Policy</a></li>
-                                    <li><a href="about-us.html">Team &amp; Condition</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
         <%@include file="Footer.jsp" %>
         <!--Footer End-->
 
